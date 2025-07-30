@@ -1,4 +1,4 @@
-# GPS WiFi Server
+# ESP32 WiFi GPS Server
 
 An ESP32-based GPS data server that receives NMEA data from a GPS module and forwards it to clients over WiFi via TCP connection.
 
@@ -14,8 +14,8 @@ An ESP32-based GPS data server that receives NMEA data from a GPS module and for
 ## Hardware Requirements
 
 - **ESP32 Development Board** (ESP32 DOIT DevKit v1 or compatible)
-- **GPS Module** with UART output (e.g., NEO-6M, NEO-8M)
-- **Connecting Wires**
+- **GPS Module** with UART output (e.g., u-blox 10)
+- **Level shifter** 5v <-> 3.3V
 
 ## Wiring
 
@@ -33,7 +33,6 @@ If you decide to go without a level shifter, it's as simple as this:
 | VCC        | 3.3V      |
 | GND        | GND       |
 | TX         | GPIO 16   |
-
 
 ## Software Requirements
 
