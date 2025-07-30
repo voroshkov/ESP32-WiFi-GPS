@@ -19,14 +19,21 @@ An ESP32-based GPS data server that receives NMEA data from a GPS module and for
 
 ## Wiring
 
-Connect your GPS module to the ESP32:
+Connect your GPS module to the ESP32 via Level Shifter. Actually level shifter might be not required in your case for your particular GPS module, but mine starts vomiting trash into UART after 3+ hours of working at 3.3V, so I decided to go with the level shifter.
+
+Schematic is as follows:
+
+<img src="docs/img/wiring.png" alt="Wiring schematic" width="600">
+
+
+If you decide to go without a level shifter, it's as simple as this:
 
 | GPS Module | ESP32 Pin |
 |------------|-----------|
 | VCC        | 3.3V      |
 | GND        | GND       |
 | TX         | GPIO 16   |
-| RX         | GPIO 17   | (not required)
+
 
 ## Software Requirements
 
